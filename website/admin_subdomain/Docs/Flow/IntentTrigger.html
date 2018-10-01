@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow: When an Intent is Used</title>
+    <!-- Main scripts -->
+    <script src="../../../js/admin_subdomain/jquery-3.1.1.min.js"></script>
+    <script src="../../../js/admin_subdomain/bootstrap.min.js"></script>
+    <script src="../../../js/plugins/metisMenu/admin_subdomain/jquery.metisMenu.js"></script>
+    <script src="../../../js/plugins/slimscroll/admin_subdomain/jquery.slimscroll.min.js"></script>
+    <script src="../../../lib/jsrender/admin_subdomain/jsrender.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="../../../js/admin_subdomain/inspinia.js"></script>
+    <script src="../../../js/plugins/pace/admin_subdomain/pace.min.js"></script>
+    <script src="../../../js/plugins/dataTables/admin_subdomain/datatables.min.js"></script>
+    <script src="../../../js/plugins/sweetalert/admin_subdomain/sweetalert.min.js"></script>
+    <script src="../../../js/plugins/jasny/admin_subdomain/jasny-bootstrap.min.js"></script>
+    <script src="../../../js/plugins/chosen/admin_subdomain/chosen.jquery.js"></script>
+    <script src="../../../js/plugins/iCheck/admin_subdomain/icheck.min.js"></script>
+    <script src="../../../js/plugins/showdown/admin_subdomain/showdown.min.js"></script>
+    <script src="../../../js/plugins/slick/admin_subdomain/slick.min.js"></script>
+    <script src="../../../js/plugins/selectize/admin_subdomain/selectize.min.js"></script>
+    <script src="../../../js/plugins/touchspin/admin_subdomain/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Main CSS -->
+    <link href="../../../css/admin_subdomain/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../css/admin_subdomain/animate.css" rel="stylesheet">
+    <link href="../../../css/admin_subdomain/bzstyle.min.css" rel="stylesheet">
+    <!-- CSS Plugins -->
+    <link href="../../../css/plugins/font-awesome/css/admin_subdomain/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../css/plugins/sweetalert/admin_subdomain/sweetalert.css" rel="stylesheet">
+    <link href="../../../css/plugins/jasny/admin_subdomain/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="../../../css/plugins/chosen/admin_subdomain/bootstrap-chosen.css" rel="stylesheet">
+    <link href="../../../css/plugins/slick/admin_subdomain/slick.css" rel="stylesheet" />
+    <link href="../../../css/plugins/slick/admin_subdomain/slick-theme.css" rel="stylesheet" />
+    <link href="../../../css/plugins/iCheck/admin_subdomain/custom.css" rel="stylesheet" />
+    <link href="../../../css/plugins/selectize/admin_subdomain/selectize.bootstrap3.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="../../../www.googletagmanager.com/gtag/js_id_UA-3107295-12.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-3107295-12');
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+<ul class="nav metismenu" id="side-menu">
+    <li class="nav-header">
+        <div class="logo-element">
+            <img src="../../../images/admin_subdomain/docs-brand.png" alt="BZ+" />
+        </div>
+    </li>
+    <li id="mnuPageIndex">
+        <a title="AtBot Overview" href="../../../admin_subdomain/Docs.html"><i class="fa fa-file-text"></i> <span class="nav-label">Overview</span></a>
+    </li>
+    <li id="mnuPageGettingStarted">
+        <a title="Getting Started" href="../../../admin_subdomain/Docs/GettingStarted.html"><i class="fa fa-file-text"></i> <span class="nav-label">Getting Started</span></a>
+    </li>
+    <li id="mnuPageTiers">
+        <a title="AtBot Product Tiers" href="../../../admin_subdomain/Docs/BizzyTiers.html"><i class="fa fa-file-text"></i> <span class="nav-label">AtBot Product Tiers</span></a>
+    </li>
+    <li id="mnuPageRestrictions">
+        <a title="Restrictions" href="../../../admin_subdomain/Docs/Restrictions.html"><i class="fa fa-file-text"></i> <span class="nav-label">Restrictions</span></a>
+    </li>
+    <li id="mnuPageSkills">
+        <a title="Skills" href="../../../admin_subdomain/Docs/Skills.html"><i class="fa fa-file-text"></i> <span class="nav-label">Skills</span></a>
+    </li>
+    <li id="mnuCatFlowConnector">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">Logic Flow Connector</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageFlowIntent"><a title="When an intent is used" href="../../../admin_subdomain/Docs/Flow/IntentTrigger.html">When an Intent is Used</a></li>
+            <li id="mnuPageFlowIntentVector"><a title="When a registered intent is used" href="../../../admin_subdomain/Docs/Flow/IntentVectorTrigger.html">When a Registered Intent is Used</a></li>
+            <li id="mnuPageFlowGR"><a title="Get Response" href="../../../admin_subdomain/Docs/Flow/GetResponse.html">Get Response</a></li>
+            <li id="mnuPageFlowGRD"><a title="Get Date Response" href="../../../admin_subdomain/Docs/Flow/GetResponseDate.html">Get Date Response</a></li>
+            <li id="mnuPageFlowGRC"><a title="Get Choice Response" href="../../../admin_subdomain/Docs/Flow/GetResponseChoice.html">Get Choice Response</a></li>
+            <li id="mnuPageFlowGRC"><a title="Get Choice List Response" href="../../../admin_subdomain/Docs/Flow/GetResponseChoiceList.html">Get Choice List Response</a></li>
+            <li id="mnuPageFlowGPR"><a title="Get People Response" href="../../../admin_subdomain/Docs/Flow/GetPeopleResponse.html">Get People Response</a></li>
+            <li id="mnuPageFlowGIVR"><a title="Get Intent Vector Response" href="../../../admin_subdomain/Docs/Flow/GetIVResponse.html">Get Intent Vector Response</a></li>
+            <li id="mnuPageFlowSR"><a title="Send Reply" href="../../../admin_subdomain/Docs/Flow/SendReply.html">Send Reply</a></li>
+            <li id="mnuPageFlowSaveBM"><a title="Save Item to Bot Memory" href="../../../admin_subdomain/Docs/Flow/SaveToMemory.html">Save to Bot Memory</a></li>
+            <li id="mnuPageFlowDeleteBM"><a title="Delete Item from Bot Memory" href="../../../admin_subdomain/Docs/Flow/DeleteFromMemory.html">Delete from Bot Memory</a></li>
+            <li id="mnuPageFlowGetBM"><a title="Get Memory Items by Type" href="../../../admin_subdomain/Docs/Flow/GetMemoryByType.html">Get Memory Items by Type</a></li>
+            <li id="mnuPageFlowGRBM"><a title="Get Bot Memory Response" href="../../../admin_subdomain/Docs/Flow/GetResponseMemory.html">Get Bot Memory Response</a></li>
+            <li id="mnuPageFlowSC"><a title="Start Private Conversation" href="../../../admin_subdomain/Docs/Flow/StartConversation.html">Start Private Conversation</a></li>
+            <li id="mnuPageFlowSGC"><a title="Start Teams Channel Group Conversation" href="../../../admin_subdomain/Docs/Flow/StartGroupConversation.html">Start Group Conversation</a></li>
+        </ul>
+    </li>
+    <li id="mnuCatAdminFlowConnector">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">Admin Flow Connector</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageSkillCreated"><a title="When a Skill is Created or Modified" href="../../../admin_subdomain/Docs/AdminFlow/SkillCreated.html">When a Skill is Created or Modified</a></li>
+            <li id="mnuPageUnlicensedActivity"><a title="When an Unlicensed User Attempts to use a bot" href="../../../admin_subdomain/Docs/AdminFlow/UnlicensedActivity.html">When an Unlicensed User Attempts to use a bot</a></li>
+            <li id="mnuPageDefaultMessageSent"><a title="When the bot Sends the Default Message to the User" href="../../../admin_subdomain/Docs/AdminFlow/DefaultMessageSent.html">When the bot Sends the Default Message to the User</a></li>
+            <li id="mnuPageAddSkilltoCat"><a title="Add Skill To Category" href="../../../admin_subdomain/Docs/AdminFlow/AddSkilltoCat.html">Add Skill To Category</a></li>
+            <li id="mnuPageRemoveSkillCat"><a title="Remove a Skill from all Categories" href="../../../admin_subdomain/Docs/AdminFlow/RemoveSkillCat.html">Remove a Skill from all Categories</a></li>
+            <li id="mnuPageGetCategories"><a title="Get Skill Categories" href="../../../admin_subdomain/Docs/AdminFlow/GetCategories.html">Get Skill Categories</a></li>
+            <li id="mnuPageAddUser"><a title="Add Licensed User" href="../../../admin_subdomain/Docs/AdminFlow/AddUser.html">Add Licensed User</a></li>
+            <li id="mnuPageRemoveUser"><a title="Remove Licensed User" href="../../../admin_subdomain/Docs/AdminFlow/RemoveUser.html">Remove Licensed User</a></li>
+            <li id="mnuPageGetLicenseStatus"><a title="Get License Status" href="../../../admin_subdomain/Docs/AdminFlow/GetLicenseStatus.html">Get License Status</a></li>
+            <li id="mnuPageBroadcastMessage"><a title="Broadcast bot Message" href="../../../admin_subdomain/Docs/AdminFlow/BroadcastMessage.html">Broadcast bot Message</a></li>
+        </ul>
+    </li>
+    <li id="mnuCatTenantMgmt">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">Tenant Management</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageTMSubscription"><a title="Subscription Management" href="../../../admin_subdomain/Docs/TenantManagement/Subscription.html">Subscription</a></li>
+            <li id="mnuPageTMUsers"><a title="User License Management" href="../../../admin_subdomain/Docs/TenantManagement/UserLicensing.html">User Licensing</a></li>
+            <li id="mnuPageTMAdmins"><a title="Delegated Administrators" href="../../../admin_subdomain/Docs/TenantManagement/Administrators.html">Administrators</a></li>
+            <li id="mnuPageTMLogging"><a title="Logging & Reporting Settings" href="../../../admin_subdomain/Docs/TenantManagement/Logging.html">Logging Settings</a></li>
+        </ul>
+    </li>
+    <li id="mnuPageCategories">
+        <a title="Category Management" href="../../../admin_subdomain/Docs/Categories.html"><i class="fa fa-file-text"></i> <span class="nav-label">Category Management</span></a>
+    </li>
+    <li id="mnuPageHelp">
+        <a title="Help Configuration" href="../../../admin_subdomain/Docs/Help.html"><i class="fa fa-file-text"></i> <span class="nav-label">Help Configuration</span></a>
+    </li>
+    <li id="mnuPageAA">
+        <a title="Actionable Answers" href="../../../admin_subdomain/Docs/ActionableAnswers.html"><i class="fa fa-file-text"></i> <span class="nav-label">Actionable Answers</span></a>
+    </li>
+    <li id="mnuCatEBots">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">Enterprise Bots</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageEBConfig"><a title="Basic Configuration Settings for Enterprise Bots" href="../../../admin_subdomain/Docs/EnterpriseBots/BasicConfiguration.html">Basic Configuration</a></li>
+            <li id="mnuPageBFReg"><a title="Registering with Microsoft Bot Framework" href="../../../admin_subdomain/Docs/EnterpriseBots/BotFrameworkRegistration.html">Bot Framework Registration</a></li>
+            <li id="mnuPageQAM"><a title="Integrating with Microsoft QnA Maker" href="../../../admin_subdomain/Docs/EnterpriseBots/QnAMakerIntegration.html">QnA Maker Integration</a></li>
+            <li id="mnuPageEBTeams"><a title="Packaging your bot for Microsoft Teams" href="../../../admin_subdomain/Docs/EnterpriseBots/PackageForTeams.html">Packaging for Teams</a></li>
+            <li id="mnuPageWebApps"><a title="Deploying your bot to Web and Applications" href="../../../admin_subdomain/Docs/EnterpriseBots/WebAndApps.html">Deploy to Web &amp; Apps</a></li>
+        </ul>
+    </li>
+    <li id="mnuCatWBots">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">Web Bots</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageWBConfig"><a title="Basic Configuration Settings for Web Bots" href="../../../admin_subdomain/Docs/WebBots/BasicConfiguration.html">Basic Configuration</a></li>
+            <li id="mnuPageWBFReg"><a title="Registering with Microsoft Bot Framework" href="../../../admin_subdomain/Docs/WebBots/BotFrameworkRegistration.html">Bot Framework Registration</a></li>
+            <li id="mnuPageWQAM"><a title="Integrating with Microsoft QnA Maker" href="../../../admin_subdomain/Docs/WebBots/QnAMakerIntegration.html">QnA Maker Integration</a></li>
+            <li id="mnuPageWWebApps"><a title="Deploying your bot to Web and Applications" href="../../../admin_subdomain/Docs/WebBots/WebAndApps.html">Deploy to Web &amp; Apps</a></li>
+        </ul>
+    </li>
+    <li id="mnuCatAi">
+        <a href="#"><i class="fa fa-folder-o"></i> <span class="nav-label">AI Integrations</span><span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level collapse">
+            <li id="mnuPageBotMemory"><a title="Bot Memory Powered by Microsoft Graph" href="../../../admin_subdomain/Docs/AI/BotMemory.html">Bot Memory</a></li>
+            <li id="mnuPageLIV"><a title="LUIS Intent Vectors" href="../../../admin_subdomain/Docs/AI/LuisIntentVectors.html">LUIS Intent Vectors</a></li>
+            <li id="mnuPageLDemo"><a title="LUIS Demo App for Intent Vectors" href="../../../admin_subdomain/Docs/AI/LuisIntentDemo.html">LUIS Demo App</a></li>
+        </ul>
+    </li>
+</ul>
+            </div>
+        </nav>
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <h2 class="navbar-text">AtBot Docs <i class="fa fa-angle-right"></i> Flow: When an Intent is Used</h2>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                 <div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-content">
+<h1>When an Intent is Used</h1>
+<label class="badge badge-success"><i class="fa fa-bolt"></i> Trigger</label>
+<h3>
+    This trigger is the component of the AtBot Flow connector that defines when this Flow should be used from your bot.  Skills in AtBot can start with this trigger.
+</h3>
+<hr />
+<div class="doc-defs">
+    <h2>Fields</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>Trigger Description</strong>
+        </div>
+        <div class="col-md-9">
+            The trigger description is used in the AtBot Admin Portal to help identify the skill as well as in the autogenerated help card that comes back from AtBot
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>Bot Trigger Type</strong>
+        </div>
+        <div class="col-md-9">
+            The bot trigger type defines whether this skill can be run by anyone in the organization (Shared) or just you (Personal)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                Keywords
+            </strong>
+        </div>
+        <div class="col-md-9">
+            Keywords are the easiest way to trigger a skill.  You may assign multiple keywords to a single skill by separating each one with a semicolon (be sure to have no spaces between each keyword set).  If there are more than one skill with the same keyword, there is no guarantee that either one will be the one triggered, so be sure not have any duplicate keywords in your skills.
+        </div>
+    </div>
+    <div class="alert alert-info">
+        <h4>Advanced Options</h4>
+        <cite>
+            You can optionally use LUIS as the engine to understand user intent.  When configured, if a user's statement comes back from LUIS with the selected Intent from the trigger, this skill will be run.
+        </cite>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                LUIS API Key
+            </strong>
+        </div>
+        <div class="col-md-9">
+            The API Key for the LUIS App you wish to use.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                LUIS App
+            </strong>
+        </div>
+        <div class="col-md-9">
+            The LUIS App that contains the Intent you wish to use for this skill
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                LUIS Intent
+            </strong>
+        </div>
+        <div class="col-md-9">
+            The LUIS Intent that, if it comes back as the highest scoring intent, causes this skill to run
+        </div>
+    </div>
+</div>
+<hr />
+<div class="doc-defs">
+    <h2>Returned Properties</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                Command Text
+            </strong>
+        </div>
+        <div class="col-md-9">
+            This is the raw text that the user sent to trigger this skill
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                Reply Activity
+            </strong>
+        </div>
+        <div class="col-md-9">
+            This is a special scope property that must be used in any subsequent actions to maintain the bot conversation 
+            <span data-toggle="tooltip" data-placement="top" title="This is a very important property to use in subsequent AtBot actions" class="badge badge-danger"><i class="fa fa-warning"></i></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                User Id
+            </strong>
+        </div>
+        <div class="col-md-9">
+            This is the Login Name (UPN) of the user who triggered the skill
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                LUIS Intent Name
+            </strong>
+        </div>
+        <div class="col-md-9">
+            The name of the top scoring LUIS Intent
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <strong>
+                LUIS Result Json
+            </strong>
+        </div>
+        <div class="col-md-9">
+            This contains the raw returned results from LUIS.  This will be your starting point for extracting entities that came back from LUIS, like people and other domain specific entities.
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="footer">
+                <div>
+                    <strong>Copyright</strong> H3 Solutions, Inc. &copy; 2018
+                     | <a href="../../../admin_subdomain/terms.html">Terms of Use</a>  |  <a href="../../../admin_subdomain/privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+    <!-- Page Script -->
+    <script>
+         $(document).ready(function () {
+            $('#mnuCatFlowConnector').addClass('active');
+            $('#mnuCatFlowConnector .collapse').removeClass('collapse');
+            $('#mnuPageFlowIntent').addClass('active');;
+        });
+    </script>
+</body>
+</html>
